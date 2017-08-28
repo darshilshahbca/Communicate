@@ -46,6 +46,7 @@ public class ToastActivity extends AppCompatActivity
 
         // TODO: Create and show the toast message
         Toast toast = Toast.makeText(this, "This is a toast", toastDuration);
+        toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
 
     }
