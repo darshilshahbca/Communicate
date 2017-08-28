@@ -19,6 +19,8 @@ public class ToastActivity extends AppCompatActivity
 
         findViewById(R.id.btnShowToast).setOnClickListener(this);
         findViewById(R.id.btnShowCustomToast).setOnClickListener(this);
+
+
     }
 
 
@@ -43,6 +45,8 @@ public class ToastActivity extends AppCompatActivity
             toastDuration = Toast.LENGTH_LONG;
 
         // TODO: Create and show the toast message
+        Toast toast = Toast.makeText(this, "This is a toast", toastDuration);
+        toast.show();
 
     }
 
