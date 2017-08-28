@@ -36,6 +36,9 @@ public class SnackbarActivity extends AppCompatActivity
 
     private void showSnackbar() {
         // TODO: Create and show the snackbar
+        Snackbar snackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+                "This is a snackbar", Snackbar.LENGTH_LONG);
+        snackbar.show();
 
     }
 
