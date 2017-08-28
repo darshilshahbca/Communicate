@@ -60,9 +60,21 @@ public class ToastActivity extends AppCompatActivity
             toastDuration = Toast.LENGTH_LONG;
 
         // TODO: Get the custom layout and inflate it
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast_layout,
+                (ViewGroup) findViewById(R.id.customToastLayout));
 
 
         // TODO: Build a toast message that uses the custom layout
+        TextView tv = (TextView)layout.findViewById(R.id.textContent);
+        tv.setText("This is a toast");
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(toastDuration);
+        toast.setGravity(Gravity.BOTTOM | Gravity.LEFT, 100, 100);
+
+        toast.setView(layout);
+        toast.show();
 
     }
 }
