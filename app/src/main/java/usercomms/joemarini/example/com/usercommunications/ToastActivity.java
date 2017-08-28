@@ -76,5 +76,7 @@ public class ToastActivity extends AppCompatActivity
         toast.setView(layout);
         toast.show();
 
+        //Custom Toast Message
+
     }
 }
