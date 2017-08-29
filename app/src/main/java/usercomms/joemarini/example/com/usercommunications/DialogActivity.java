@@ -37,10 +37,20 @@ public class DialogActivity extends AppCompatActivity
                 break;
             case R.id.btnShowDatePicker:
                 // TODO: Get a calendar instance
+                Calendar cal = Calendar.getInstance();
 
                 // TODO: Create a DatePickerDialog
+                DatePickerDialog datePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener(){
+                   @Override
+                    public void onDateSet(DatePicker datePicker, int year, int mOfYear, int dOfMo){
+                       Log.i(TAG, String.format("Date Chosen -- day: %d, month: %d, year: %d", dOfMo, mOfYear, year));
+                   }
+                }, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
 
                 // TODO: Set the title and show the dialog
+                datePicker.setTitle("Choose a Date");
+                datePicker.show();
+
 
                 break;
             case R.id.btnShowChoiceDialog:
