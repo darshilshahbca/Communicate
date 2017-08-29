@@ -55,6 +55,7 @@ public class DialogActivity extends AppCompatActivity
     private void showSimpleDialog() {
         SimpleDialogFragment simpleDialog = new SimpleDialogFragment();
         // TODO: Use setCancelable() to make the dialog non-cancelable
+        simpleDialog.setCancelable(false);
         simpleDialog.show(getSupportFragmentManager(), "SimpleDialogFragment");
     }
 
